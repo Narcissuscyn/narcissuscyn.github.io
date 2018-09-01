@@ -3,7 +3,10 @@ layout: post
 title:  "Multi-label learning methods"
 date:   2018-08-09 13:50:39
 categories: jekyll
+mathjax: true
 ---
+* content
+{:toc}
 # Multi-label classification
 
 ## 1.Formal definitions
@@ -36,12 +39,15 @@ categories: jekyll
 
 
 
+
+
+
    Real value function f:
 $$
    f：X\times Y\rightarrow \mathbb{R}
 $$
 
-   > ​	 where f(x, y) can be regarded as the confidence of y ∈ Y being the proper label of x. Specifically, given a multi-label example (x, Y ), f(·, ·) should yield larger output on the relevant label $y ′ ∈ Y$ and smaller output on the irrelevant label $y^{''}\notin   Y $
+   > 	 where f(x, y) can be regarded as the confidence of y ∈ Y being the proper label of x. Specifically, given a multi-label example (x, Y ), f(·, ·) should yield larger output on the relevant label $y ′ ∈ Y$ and smaller output on the irrelevant label $y^{''}\notin   Y $
 
    multi-label classifier h(·)：
 $$

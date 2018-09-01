@@ -2,9 +2,11 @@
 layout: post
 title: "hierachical softmax"
 date: 2018-08-07 17:40:41
+mathjax: true
 ---
 
-[TOC]
+* content
+{:toc}
 
 要理解这个算法，就要先知道word2vector里面发两个模型：CBOW和skip-gram模型。要理解其中理论，此文讲解甚好：[（1）Word2Vector中的数学理解](https://spaces.ac.cn/usr/uploads/2017/04/2833204610.pdf)、[（2）Deep Learning 实战之 word2vec](https://spaces.ac.cn/usr/uploads/2017/04/146269300.pdf)。
 
@@ -13,7 +15,7 @@ date: 2018-08-07 17:40:41
 ##### **语言模型（及词向量）**
 
 
-​	词向量就是将语言数学化的表示，以能够输入算法，进行学习预测等。而词向量用于`统计语言模型`中就是一个重要的基础；统计语言模型是所有nlp的基础，它被广泛应用于语音识别、机器翻译等各项任务；统计语言模型就是计算`一个句子的概率`的模型：$p(W)$
+	词向量就是将语言数学化的表示，以能够输入算法，进行学习预测等。而词向量用于`统计语言模型`中就是一个重要的基础；统计语言模型是所有nlp的基础，它被广泛应用于语音识别、机器翻译等各项任务；统计语言模型就是计算`一个句子的概率`的模型：$p(W)$
 $$
 p(W)=	p(w_1^T)=p(w_1,...,w_T)
 $$
@@ -68,7 +70,7 @@ $$
 
 ##### **hierachiccal softmax和negtive sampling**
 
-​	CBOW和ship-gram都可以分别和这两种多分类方法相结合使用，negtive sampling不再使用hierachiccal softmax中的`huffman树`，而是利用相对简单的`随机负采样`。hierachiccal softmax原始思想是层级的分类:
+	CBOW和ship-gram都可以分别和这两种多分类方法相结合使用，negtive sampling不再使用hierachiccal softmax中的`huffman树`，而是利用相对简单的`随机负采样`。hierachiccal softmax原始思想是层级的分类:
 
 > 对于二叉 树来说，则是使用二分类近似原来的多分类。例如给定 $w_i$，先让模型判断 $w_o$是 不是名词，再判断是不是食物名，再判断是不是水果，再判断是不是“桔子”。 虽然 word2vec 论文里，作者是使用哈夫曼编码构造的一连串两分类。但是在训 练过程中，模型会赋予这些抽象的中间结点一个合适的向量， 这个向量代表了它 对应的所有子结点。因为真正的单词公用了这些抽象结点的向量，所以 Hierarchical Softmax 方法和原始问题并不是等价的，但是这种近似并不会显著带 来性能上的损失同时又使得模型的求解规模显著上升    
 

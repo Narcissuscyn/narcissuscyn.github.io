@@ -1,0 +1,8 @@
+nian@DESKTOP-U7I1NA6 MINGW64 ~/OneDrive/NoteBook/narcissuscyn.github.io (master)
+$ git add --all
+
+nian@DESKTOP-U7I1NA6 MINGW64 ~/OneDrive/NoteBook/narcissuscyn.github.io (master)
+$ git commit -m "Learning Visual N-Grams from Web Data.md"
+
+nian@DESKTOP-U7I1NA6 MINGW64 ~/OneDrive/NoteBook/narcissuscyn.github.io (master)
+$ git push origin master

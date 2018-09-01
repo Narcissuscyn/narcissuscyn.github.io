@@ -2,21 +2,21 @@
 layout: post
 title: "Learning Visual N-Granms from web data"
 date: 2018-08-06 17:40:41
+mathjax: true
 ---
 
 
 ## 《Learning Visual N-Granms from web data》
 
-### 目录
-[TOC]
-
+* content
+{:toc}
 
 ## 一、论文理解
 #### 文章思想
 
-​	利用弱标签的web数据，建立language与image的Visual n-gram model.能够预测与图像内容相关的phrases，这篇文章的主要贡献在于损失函数，其来源为nlp里面的n-gram模型。
-
-​	关于loss函数：given an image I, assign a likelihood p(w|I) to each possible phrase (n-gram) w。we develop a novel, differentiable `loss function` that optimizes trainable parameters for `frequent n-grams`, whereas for `infrequent n-grams`, the loss is dominated by the predicted likelihood of smaller `“sub-grams”`.
+	利用弱标签的web数据，建立language与image的Visual n-gram model.能够预测与图像内容相关的phrases，这篇文章的主要贡献在于损失函数，其来源为nlp里面的n-gram模型。
+	
+	关于loss函数：given an image I, assign a likelihood p(w|I) to each possible phrase (n-gram) w。we develop a novel, differentiable `loss function` that optimizes trainable parameters for `frequent n-grams`, whereas for `infrequent n-grams`, the loss is dominated by the predicted likelihood of smaller `“sub-grams”`.
 
 #### 相关工作
 

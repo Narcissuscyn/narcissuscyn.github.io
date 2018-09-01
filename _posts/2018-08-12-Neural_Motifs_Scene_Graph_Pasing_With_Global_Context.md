@@ -6,6 +6,8 @@ categories: jekyll
 mathjax: true
 ---
 
+* content
+{:toc}
 ### Stacked Motif Networks
 
 
@@ -85,6 +87,18 @@ $$
 
 
 
+**实验设置**
+
+1. 统计模型：用于说明物体检测的重要性。
+   - FREQ模型：使用预训练的detector用来预测object label；用统计概率得到predicate probabilities.
+   - FREQ+OVERLAP：在统计谓词频率的时候，要求两个物体有overlap。
+2. Stanford模型：在[47]上面修改的，消息传递结构用的是本文的motif。
+3. Ablations:
+   - MotifNet-NoContext:直接用object的label embedding($d_i,d_j$)输入公式6,就是不要$f_{i,j}$.然后利用公式7预测关系。说明vision feature的重要。
+   - MotifNet-different roi ordering scheme：完整的网络
+
+
+
 **实验结果**
 
 ![](https://ws1.sinaimg.cn/large/005IsqTWly1fu819pw1w6j30tk0cw78y.jpg)
@@ -103,13 +117,11 @@ $$
 
    - `object layouts` can provide sufficient context for captioning COCO images [52, 28] 
 
-     
-
 2. structured model
 
    - `Deep sequential models` have demonstrated strong performance for tasks such as captioning [4, 9, 45, 18] and visual question answering [1, 37, 53, 12, 8],`multilabel classification` [46] 
    - `graph linearization` for object detections [52], language parsing [44], generating text from abstract meaning graphs [21] 
-   - RNNs provide effective context for consecutive detection predictions. 
+   - `our`:RNNs provide effective context for consecutive detection predictions. 
 
 3. Scene Graph Methods 
 
