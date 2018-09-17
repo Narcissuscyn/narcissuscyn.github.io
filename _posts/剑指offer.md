@@ -1,0 +1,192 @@
+[TOC]
+
+
+
+### 数字在排序数组中出现的次数
+
+```c++
+class Solution {
+public:
+	int GetNumberOfK(vector<int> data, int k) {
+		int count = 0;
+		for (int i = 0; i < data.size(); i++)
+		{
+			if (data[i] == k)count++;
+		}
+		return count;
+	}
+};
+```
+
+这个代码虽然简单，但是当面试时问道这个问题时，一定不要简单的这么回答，看看题目就知道，这么简单的题目，而且是排序数组，怎么会就直接遍历一遍呢。明显要用到二叉搜索，降低时间复杂度由$O(n)$到$O(log(n))$；
+
+```c++
+class Solution {
+public:
+
+	int GetNumberOfK(vector<int> data, int k) {
+
+		int count = 0;
+		if (data.size() != 0)
+		{
+			int min = getMinIdx(data, k, 0, data.size() - 1);
+			int max = getMaxIdx(data, k, 0, data.size() - 1);
+			if (min != -1 && max != -1)
+			{
+				count = max - min + 1;
+			}
+		}
+		return count;
+	}
+
+	int getMinIdx(vector<int> data, int k, int l,int r)
+	{
+		if (l > r)return -1;
+		int mid = (l + r) / 2;
+		if (data[mid] < k) {
+			l = mid + 1;
+		}
+		else if(data[mid]>k)
+		{
+			r = mid - 1;
+		}
+		else
+		{
+			if (mid>0&&data[mid - 1] == k)
+			{
+				r = mid - 1;
+			}
+			else
+			{
+				return mid;
+			}
+		}
+		return getMinIdx(data, k, l, r);
+	}
+	int getMaxIdx(vector<int> data, int k, int l,int r)
+	{
+		if (l > r)return -1;
+		int mid = (l + r) / 2;
+		if (data[mid] < k) {
+			l = mid + 1;
+		}
+		else if (data[mid]>k)
+		{
+			r = mid - 1;
+		}
+		else
+		{
+			if (mid<data.size()-1&&data[mid +1] == k)
+			{
+				l= mid +1;
+			}
+			else
+			{
+				return mid;
+			}
+		}
+		return getMaxIdx(data, k, l, r);
+
+	}
+};
+```
+
+`思路`分别递归的二叉树搜索k出现的最小下标和最大下标。
+
+
+
+### 二叉树的深度
+
+```c++
+
+
+#include<iostream>
+#include <algorithm>
+#include<string>
+#include<vector>
+#include<stack>
+#include<queue>
+using namespace std;
+
+
+struct TreeNode {
+int val;
+struct TreeNode *left;
+struct TreeNode *right;
+TreeNode(int x) :
+val(x), left(NULL), right(NULL) {
+}
+};
+class Solution {
+public:
+	TreeNode*create_tree(TreeNode *root)
+	{
+		
+		char ch;
+		if ((ch = getchar()) == '#')root = NULL;//其中getchar（）为逐个读入标准库函数 
+		else {
+			root = new TreeNode(ch);//产生新的子树 
+			create_tree(root->left);//递归创建左子树 
+			create_tree(root->right);//递归创建右子树 
+		}
+		return root;
+	}
+	int TreeDepth(TreeNode* p)
+	{
+		if (p == NULL)
+			return 0;//注意空数的深度是1
+		int h1 = TreeDepth(p->left);
+		int h2 = TreeDepth(p->right);
+		if (h1>h2)return (h1 + 1);
+		return h2 + 1;
+	}
+};
+int main()
+{
+	Solution solver;
+	TreeNode *root = NULL;
+	solver.create_tree(root);
+	int result = solver.TreeDepth(root);
+	return 0;
+}
+```
+
+`思路`比较简单，不要想太复杂了。
+
+
+
+### 平衡二叉树
+
+```c++
+class Solution {
+public:
+	int TreeDepth(TreeNode* p)
+	{
+		if (p == NULL)
+			return 0;
+		int h1 = TreeDepth(p->left);
+		if (h1 == -2)return -2;
+		int h2 = TreeDepth(p->right);
+		if (h2 == -2)return -2;
+		if (abs(h1 - h2) > 1)return -2;
+		if (h1>h2)return (h1 + 1);
+		return h2 + 1;
+	}
+
+	//39平衡二叉树
+	bool IsBalanced_Solution(TreeNode* pRoot) {
+		if (pRoot == NULL)
+			return true;
+		int h = TreeDepth(pRoot);
+		if (h ==-2)return false;
+		return true;
+	}
+};
+```
+
+`思路`把求深度的代码改一下，一旦出现不平衡的节点就直接返回-2，返回-2的原因是怕有的题里面要求空节点的深度为-1.此算法不需要重复遍历二叉树节点。
+
+
+
+### 数组中只出现一次的数字
+
