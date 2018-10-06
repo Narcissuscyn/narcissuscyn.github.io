@@ -3,7 +3,7 @@ layout: post
 title:  "1.Two Sum"
 date:   2018-09-17
 categories: leetcode
-tags: leetcode array
+tags: 数组
 mathjax: true
 author: Narcissus
 ---

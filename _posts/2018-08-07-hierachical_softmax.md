@@ -2,6 +2,8 @@
 layout: post
 title: "hierachical softmax"
 date: 2018-08-07 17:40:41
+categories:机器学习
+tags:损失函数
 mathjax: true
 ---
 

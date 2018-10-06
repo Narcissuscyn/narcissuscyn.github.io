@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Multi-label learning methods"
+title:  "Multi label learning methods"
 date:   2018-08-09 13:50:39
-categories: jekyll
+categories:机器学习
+tags:多标签学习
 mathjax: true
 ---
 * content
@@ -35,6 +36,7 @@ mathjax: true
      $$
      P LDiv(D) = \frac{1}{|D|} · LDiv(D)
      $$
+
 
 
 

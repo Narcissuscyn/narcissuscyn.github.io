@@ -2,7 +2,8 @@
 layout: post
 title:  "Neural Motifs Scene Graph Pasing With Global Context!"
 date:   2018-08-12 13:50:39
-categories: jekyll
+categories: 图像理解
+tags:RelationshipDetection
 mathjax: true
 ---
 

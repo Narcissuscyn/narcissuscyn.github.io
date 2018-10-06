@@ -2,8 +2,8 @@
 layout: post
 title:  "relation network for object detection"
 date:   2018-09-25
-categories: RelationshipDetection ObjectDetect
-tags: ObjectDetect relationship
+categories: 图像理解
+tags: ObjectDetection RelationshipDetection
 mathjax: true
 author: Narcissus
 ---
