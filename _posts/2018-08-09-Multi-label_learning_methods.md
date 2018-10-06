@@ -1,10 +1,11 @@
 ---
 layout: post
 title:  "Multi label learning methods"
-date:   2018-08-09 13:50:39
-categories:机器学习
-tags:多标签学习
+date:   2018-08-09 17:40:41
+categories: 机器学习
+tags: 多标签学习
 mathjax: true
+author: Narcissus
 ---
 * content
 {:toc}
@@ -36,6 +37,7 @@ mathjax: true
      $$
      P LDiv(D) = \frac{1}{|D|} · LDiv(D)
      $$
+
 
 
 
