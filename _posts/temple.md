@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "hello jekyll!"
-date:   2018-05-05
+date:   2018-05-05 17:40:41
 categories: jekyll
 tags: jekyll markdown
 mathjax: true
