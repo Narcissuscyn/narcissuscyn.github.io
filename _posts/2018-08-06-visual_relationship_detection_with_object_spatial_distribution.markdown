@@ -2,8 +2,8 @@
 layout: post
 title: "visual relationship detection with object spatial distribution"
 date: 2018-08-06 17:40:41
-categories:图像理解
-tags:RelationshipDetection
+categories: 图像理解
+tags: RelationshipDetection
 mathjax: true
 ---
 

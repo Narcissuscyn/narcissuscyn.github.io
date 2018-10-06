@@ -44,6 +44,7 @@ mathjax: true
 
 
 
+
    Real value function f:
 $$
    f：X\times Y\rightarrow \mathbb{R}

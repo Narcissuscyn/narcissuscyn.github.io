@@ -2,8 +2,8 @@
   layout: post
   title:  "pytorch中利用BCEloss进行多分类的原理"
   date:   2018-08-18 13:50:39
-  categories:机器学习
-  tags:损失函数
+  categories: 机器学习
+  tags: 损失函数
   mathjax: true
 ---
 

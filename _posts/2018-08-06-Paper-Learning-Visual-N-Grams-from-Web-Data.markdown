@@ -2,8 +2,8 @@
 layout: post
 title: "Learning Visual N-Granms from web data"
 date: 2018-08-06 17:40:41
-categories:图像理解 NLP
-tags:图像字幕 损失函数
+categories: 图像理解 NLP
+tags: 图像字幕 损失函数
 mathjax: true
 ---
 
