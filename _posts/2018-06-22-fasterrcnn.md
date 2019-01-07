@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Learning Visual N-Granms from web data"
+title: "Faster-RCNN论文解析"
 date: 2018-06-22 17:40:41
 categories: 图像理解
 tags: ObjectDetection
