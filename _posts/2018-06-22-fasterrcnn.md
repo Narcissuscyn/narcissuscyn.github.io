@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Faster-RCNN"
-date: 2018-07-22
-categories: DeepLearning
+date: 2018-06-22
+categories: 图像理解
 tags: ObjectDetection
 mathjax: true
 ---
