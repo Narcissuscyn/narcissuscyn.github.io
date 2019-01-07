@@ -15,12 +15,14 @@ classtorch.nn.BCELoss(weight=None, size_average=True)[[source\]](https://pytorch
 
 Creates a criterion that measures the  Binary Cross Entropy between the target and the output:(i为每一个类别)
 
-![loss(o, t) —  —l/n * log(o[i]) + (1 — t[i]) * log(l o i ](file:///C:/Users/nian.000/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png)
-
+$$
+loss(o,t)=\frac{-1}{n}\sum_{i}{(t[i]*log(o[i])+(1-t[i])*log(1-o[i]))}
+$$
 or in the case of the weight argument being  specified:
 
-![loss(o, t) —  —l/n weight[i] * (t[i] * log(o[i]) + (1  — t[i]) * log(l o i ](file:///C:/Users/nian.000/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png)
-
+$$
+loss(o,t)=\frac{-1}{n}\sum_{i}{weight[i]*(t[i]*log(o[i])+(1-t[i])*log(1-o[i]))}
+$$
 This is used for measuring the error of a  reconstruction in for example an auto-encoder. Note that the targets t[i] should  be numbers between 0 and 1.
 
 | weight       | weight ([Tensor](https://pytorch.org/docs/0.3.0/tensors.html#torch.Tensor), optional) – a manual rescaling weight given to the loss of each batch element. If given, has to be aTensor of size “nbatch”. |
@@ -29,8 +31,8 @@ This is used for measuring the error of a  reconstruction in for example an auto
 
 Shape:
 
-- Input: (N,∗)(N,∗) where * means, any number of       additional dimensions
-- Target: (N,∗)(N,∗), same shape as the input
+- Input:$ (N,∗)(N,∗) $where * means, any number of       additional dimensions
+- Target: $(N,∗)(N,∗), $same shape as the input
 
 Examples:
 
