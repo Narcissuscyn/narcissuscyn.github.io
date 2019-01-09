@@ -13,8 +13,7 @@ type: page
 
 ## 联系我
 
-* GitHub: https://github.com/princewang1994
-* email: princewang1994@gmail.com
-* 知乎: [Prince Wang](https://www.zhihu.com/people/princewang-65/activities)
+* GitHub: https://github.com/Narcissuscyn
+* email: narcissuscyn@gmail.com
 
 ## 关于本站
