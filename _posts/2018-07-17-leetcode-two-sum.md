@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "1.Two Sum"
-date:   2018-09-17 17:40:41
+date:   2018-07-17 17:40:41
 categories: leetcode
 tags: 数组
 mathjax: true
