@@ -18,6 +18,8 @@ author: Narcissus
 
 ## Why Candidate Sampling
 
+
+
 “Exhaustive” training methods such as softmax and logistic regression require us to compute F(x, y) for every class y ∈ L for every training example. When |L| is very large, this can be prohibitively expensive.
 
 
@@ -31,16 +33,22 @@ The random choice of $S_i$ may or may not depend on $x_i$ and/or $T_i$.
 
 ## Algorithms
 
+
+
 ![candidate_sampling](https://narcissuspicbed.oss-cn-hangzhou.aliyuncs.com/candidate_sampling.png)
 
 一些表的的解释：
 
+
+
 1. $Q(y|x)$是给定context $x$时，y（被采样到的集合里面的label）的概率或者expect count。如果采样的负样本都不重复，就是概率，否则，就是采样个数(expect count)；
 
+   
    $$
    Q(y|x):=E(S(y)|x)
    $$
    
+
 2. 最后一列表示这个algorithm要近似的目标，因为都是采样部分负样本，无法完全准确的计算每个label的分数，只能近似。比如NCE用$F(x,y)-log(Q(y|x))$来近似$log(P(y|x))$。
 
 # Candidate Sampling in TensorFlow
