@@ -20,10 +20,13 @@ author: Narcissus
 
 “Exhaustive” training methods such as softmax and logistic regression require us to compute F(x, y) for every class y ∈ L for every training example. When |L| is very large, this can be prohibitively expensive.
 
+
 “Candidate Sampling” training methods involve constructing a training task in which for each training example  $（x_i,T_i)$ , we only need to evaluate   $F(x, y)$ for a small set of candidate classes $C_i\subset L$ . Typically, the set of candidates $C_i$ is the union of the target classes with a randomly chosen sample of (other) classes $S_i\subset L$ .
+
 $$
 C_i=T_i\cup S_i
 $$
+
 The random choice of $S_i$ may or may not depend on $x_i$ and/or $T_i$.
 
 ## Algorithms
@@ -33,6 +36,7 @@ The random choice of $S_i$ may or may not depend on $x_i$ and/or $T_i$.
 一些表的的解释：
 
 1. $Q(y|x)$是给定context $x$时，y（被采样到的集合里面的label）的概率或者expect count。如果采样的负样本都不重复，就是概率，否则，就是采样个数(expect count)；
+
    $$
    Q(y|x):=E(S(y)|x)
    $$
@@ -46,11 +50,11 @@ Tensorflow实现了两种常用于word2vec的loss，sampled softmax和NCE，这�
 
 ## Intuitive explanation
 
-- NCE      loss的直观想法：把多分类问题转化成二分类。
+- NCE loss的直观想法：把多分类问题转化成二分类。
 
   之前计算softmax的时候class数量太大，NCE索性就把分类缩减为二分类问题。之前的问题是计算某个类的归一化概率是多少，二分类的问题是input和label正确匹配的概率是多少。二分类问题群众喜闻乐见，直接上logistic regression估算一下概率。
 
-- Sampled      softmax则是只抽取一部分样本计算softmax。这个想法也很好理解，训练的时候我不需要特别精准的softmax归一化概率，我只需要一个粗略值做back propoagation就好了
+- Sampled softmax则是只抽取一部分样本计算softmax。这个想法也很好理解，训练的时候我不需要特别精准的softmax归一化概率，我只需要一个粗略值做back propoagation就好了
 
 此部分参考： https://www.zhihu.com/question/50043438/answer/254300443
 
