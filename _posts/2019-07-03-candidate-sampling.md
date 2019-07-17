@@ -1,7 +1,6 @@
-
 ---
 layout: post
-title:  "candidate_sampling"
+title:  "candidate sampling"
 date:   2019-07-03 17:40:41
 categories: 机器学习
 tags: 
