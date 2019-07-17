@@ -1,4 +1,17 @@
 
+---
+layout: post
+title:  "candidate_sampling"
+date:   2019-07-03 17:40:41
+categories: 机器学习
+tags: 
+mathjax: true
+author: Narcissus
+---
+
+* content
+{:toc}
+
 
 # Candidate Sampling
 
