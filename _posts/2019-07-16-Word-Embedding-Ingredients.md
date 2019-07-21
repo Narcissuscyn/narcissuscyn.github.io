@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Word Embedding models VS. Distributed Semantic Models"
-date:   2019-07-21 17:40:41
+date:   2019-07-16 17:40:41
 categories: 机器学习
 tags: NLP
 mathjax: true
