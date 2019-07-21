@@ -10,6 +10,7 @@ author: Narcissus
 
 * content
 {:toc}
+
 # Word Embedding 深入理解
 
 Well-known models for learning word embeddings based on language modelling. 这些无监督方法学得的词向量已经在很多NLP任务中代替了传统的“分布式特征”（distributional feature，since the underlying semantic theory is called [distributional semantics](https://en.wikipedia.org/wiki/Distributional_semantics)）,比如Brown clusters以及LSA 特征。如今盛行的Word Embedding都是指的“dense representations of words in a low-dimensional vector space”，还可以表示为*word vectors* , *distributed representations*, semantic vector space or simply word space。Word Embedding表示的向量能表示语义相似性，可以用来表示自身的语义特征，计算不同词之间的语义相似性，也可以作为一种表示，应用到其他NLP任务中去，like text classification, document clustering, part of speech tagging, named entity recognition, sentiment analysis, and so on. 
