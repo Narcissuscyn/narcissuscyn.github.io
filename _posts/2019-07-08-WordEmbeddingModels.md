@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Word Embedding models的深入理解"
-date:   2019-07-20 17:40:41
+date:   2019-07-08 17:40:41
 categories: 机器学习
 tags: NLP
 mathjax: true
