@@ -8,6 +8,9 @@ mathjax: true
 author: Narcissus
 ---
 
+若显示有问题，可查看[pdf版](https://github.com/Narcissuscyn/Algorithm/blob/master/WordEmbeddingIngredients.pdf)
+
+
 这篇文章主要讲了Word2Vec能够成功的一些因素，会和传统的分布式语义模型(DSMs)进行比较，并将一些技巧迁移到分布式模型上去，会显示出DSMs并不会比word2vec差，虽然这并不是新的见解，但由于这些传统方法在深度学习面前总是显得黯然失色，因此值得被再提及。这篇博客主要基于[*Improving Distributional Similarity with Lessons Learned from Word Embeddings*](http://ruder.io/secret-word2vec/index.html#fn1) 。
 
 ## Glove模型
