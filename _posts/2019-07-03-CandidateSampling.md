@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Candidate Sampling"
+title:  "Candidate Sampling 及TensorFlow中的实现"
 date:   2019-07-03 17:40:41
 categories: 机器学习
 tags: 
